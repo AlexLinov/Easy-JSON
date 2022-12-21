@@ -12,4 +12,4 @@ $data = ConvertFrom-Json $json
 
 $ip = $data.ipAddress #change to desired JSON object
 
-Write-Output $ip | Out-File $output
+Write-Output $ip | Sort-Object | Get-Unique | Out-File $output
